@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <Greeting />
+    <Greeting greeting="Hey" who="JavaScript"/>
   </div>
 </template>
 
