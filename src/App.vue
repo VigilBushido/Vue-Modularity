@@ -13,14 +13,16 @@
     <!-- Prop Typing and Validation -->
     <!-- our Repeat component will be consumed as follows -->
     <!-- static <Repeat :config="{ times: 3, content: 'Repeat me.' }" /> -->
-    <Repeat :times="count" content="Repeat." />
-    <button @click="increment()">Repeat</button>
+    <!--     <RepeatTyped :times="count" content="Repeat." />
+    <button @click="increment()">Repeat</button> -->
+    <RepeatTyped :times="count" :content="55" />
   </div>
 </template>
 
 <script>
 //import Greeting from "./components/Greeting";
-import Repeat from "./components/Repeat";
+//import Repeat from "./components/Repeat";
+import RepeatTyped from "./components/RepeatTyped";
 //import Hello from "./components/Hello"; // using dynamic props with data binding
 
 //imports for passing props that change over time
@@ -32,9 +34,11 @@ const possibleGreetings = [
 // components export
 export default {
   name: "App",
+
   components: {
     //Greeting,
-    Repeat,
+    //Repeat,
+    RepeatTyped,
     //Hello,
   },
   data() {
@@ -44,7 +48,8 @@ export default {
       /*    greeting: "Hello",
       who: "Vue.js",   // we refactor this so it only holds default index*/
       currentIndex: 0,
-      count: 1,
+      //count: 1,
+      count: "no-number-here",
     };
   },
   computed: {
