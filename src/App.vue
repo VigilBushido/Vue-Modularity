@@ -15,15 +15,18 @@
     <!-- static <Repeat :config="{ times: 3, content: 'Repeat me.' }" /> -->
     <!--     <RepeatTyped :times="count" content="Repeat." />
     <button @click="increment()">Repeat</button> -->
-    <RepeatTyped :times="count" :content="55" />
+    <!--<RepeatTyped :times="count" :content="55" />  causes the 2 errors to occur -->
+
+    <CustomSelect :selected="selected" :options="options" />
   </div>
 </template>
 
 <script>
 //import Greeting from "./components/Greeting";
 //import Repeat from "./components/Repeat";
-import RepeatTyped from "./components/RepeatTyped";
+//import RepeatTyped from "./components/RepeatTyped";
 //import Hello from "./components/Hello"; // using dynamic props with data binding
+import CustomSelect from "./components/CustomSelect";
 
 //imports for passing props that change over time
 const possibleGreetings = [
@@ -38,7 +41,8 @@ export default {
   components: {
     //Greeting,
     //Repeat,
-    RepeatTyped,
+    //RepeatTyped,
+    CustomSelect,
     //Hello,
   },
   data() {
@@ -50,6 +54,23 @@ export default {
       currentIndex: 0,
       //count: 1,
       count: "no-number-here",
+
+      //Custom validation of Array's, Object shapes, and more with Validators
+      selected: "salt-vinegar",
+      options: [
+        {
+          value: "ready-salted",
+          label: "Ready Salted",
+        },
+        {
+          value: "cheese-onion",
+          label: "Cheese & Onion",
+        },
+        {
+          value: "salt-vinegar",
+          label: "Salt & Vinegar", // removing a label will cause the prop validator in app to signal
+        },
+      ],
     };
   },
   computed: {
