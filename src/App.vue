@@ -7,19 +7,20 @@
     <button @click="setWho('JavaScript')">JavaScript</button>
     <button @click="setWho('Everyone')">Everyone</button> -->
 
-    <Greeting :greeting="greeting" :who="who" />
-    <button @click="newGreeting()">New Greeting</button>
+    <!--     <Greeting :greeting="greeting" :who="who" />
+    <button @click="newGreeting()">New Greeting</button> -->
 
     <!-- Prop Typing and Validation -->
     <!-- our Repeat component will be consumed as follows -->
+    <!-- static <Repeat :config="{ times: 3, content: 'Repeat me.' }" /> -->
     <Repeat :times="count" content="Repeat." />
     <button @click="increment()">Repeat</button>
   </div>
 </template>
 
 <script>
-import Greeting from "./components/Greeting";
-import Repeat from ".components/Repeat";
+//import Greeting from "./components/Greeting";
+import Repeat from "./components/Repeat";
 //import Hello from "./components/Hello"; // using dynamic props with data binding
 
 //imports for passing props that change over time
@@ -32,7 +33,7 @@ const possibleGreetings = [
 export default {
   name: "App",
   components: {
-    Greeting,
+    //Greeting,
     Repeat,
     //Hello,
   },
