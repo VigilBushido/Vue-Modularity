@@ -9,11 +9,17 @@
 
     <Greeting :greeting="greeting" :who="who" />
     <button @click="newGreeting()">New Greeting</button>
+
+    <!-- Prop Typing and Validation -->
+    <!-- our Repeat component will be consumed as follows -->
+    <Repeat :times="count" content="Repeat." />
+    <button @click="increment()">Repeat</button>
   </div>
 </template>
 
 <script>
 import Greeting from "./components/Greeting";
+import Repeat from ".components/Repeat";
 //import Hello from "./components/Hello"; // using dynamic props with data binding
 
 //imports for passing props that change over time
@@ -27,6 +33,7 @@ export default {
   name: "App",
   components: {
     Greeting,
+    Repeat,
     //Hello,
   },
   data() {
@@ -36,6 +43,7 @@ export default {
       /*    greeting: "Hello",
       who: "Vue.js",   // we refactor this so it only holds default index*/
       currentIndex: 0,
+      count: 1,
     };
   },
   computed: {
@@ -51,6 +59,9 @@ export default {
     },
   },
   methods: {
+    increment() {
+      this.count += 1;
+    },
     newGreeting() {
       console.log(possibleGreetings.length - 1);
       this.currentIndex =
