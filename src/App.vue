@@ -17,9 +17,12 @@
     <button @click="increment()">Repeat</button> -->
     <!--<RepeatTyped :times="count" :content="55" />  causes the 2 errors to occur -->
 
-    <CustomSelect :selected="selected" :options="options" />
+    <!--<CustomSelect :selected="selected" :options="options" /> -->
 
-    <PaginatedList :items="snacks" :offset="offset" : limit="limit" />
+    <PaginatedList :items="snacks" :offset="offset" :limit="limit" />
+
+    <button @click="offset++">Increment Offset (current: {{ offset }})</button>
+    <button @click="limit++">Increment Limit (current: {{ limit }})</button>
   </div>
 </template>
 
@@ -28,7 +31,7 @@
 //import Repeat from "./components/Repeat";
 //import RepeatTyped from "./components/RepeatTyped";
 //import Hello from "./components/Hello"; // using dynamic props with data binding
-import CustomSelect from "./components/CustomSelect";
+//import CustomSelect from "./components/CustomSelect";
 import PaginatedList from "./components/PaginatedList.vue";
 
 //imports for passing props that change over time
@@ -45,12 +48,28 @@ export default {
     //Greeting,
     //Repeat,
     //RepeatTyped,
-    CustomSelect,
+    //CustomSelect,
     PaginatedList,
     //Hello,
   },
   data() {
     return {
+      offset: 0,
+      limit: 0,
+      snacks: [
+        {
+          id: "ready-salted",
+          content: "Ready Salted",
+        },
+        {
+          id: "cheese-onion",
+          content: "Cheese & Onion",
+        },
+        {
+          id: "salt-vinegar",
+          content: "Salt & Vinegar",
+        },
+      ],
       //appWho: "Vue.js", // using dynamic props with data binding
       //4.02 below we make a greeting app
       /*    greeting: "Hello",
