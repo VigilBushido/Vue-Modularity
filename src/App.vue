@@ -18,6 +18,8 @@
     <!--<RepeatTyped :times="count" :content="55" />  causes the 2 errors to occur -->
 
     <CustomSelect :selected="selected" :options="options" />
+
+    <PaginatedList :items="snacks" :offset="offset" : limit="limit" />
   </div>
 </template>
 
@@ -27,6 +29,7 @@
 //import RepeatTyped from "./components/RepeatTyped";
 //import Hello from "./components/Hello"; // using dynamic props with data binding
 import CustomSelect from "./components/CustomSelect";
+import PaginatedList from "./components/PaginatedList.vue";
 
 //imports for passing props that change over time
 const possibleGreetings = [
@@ -43,6 +46,7 @@ export default {
     //Repeat,
     //RepeatTyped,
     CustomSelect,
+    PaginatedList,
     //Hello,
   },
   data() {
