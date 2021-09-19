@@ -62,8 +62,8 @@ export default {
           content: "Ready Salted",
         },
         {
-          id: "cheese-onion",
-          content: "Cheese & Onion",
+          id: "spicy-jalepeno",
+          content: "Spicy & Japleno",
         },
         {
           id: "salt-vinegar",
