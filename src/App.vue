@@ -19,10 +19,10 @@
 
     <!--<CustomSelect :selected="selected" :options="options" /> -->
 
-    <PaginatedList :items="snacks" :offset="offset" :limit="limit" />
+    <!--     <PaginatedList :items="snacks" :offset="offset" :limit="limit" />
 
     <button @click="offset++">Increment Offset (current: {{ offset }})</button>
-    <button @click="limit++">Increment Limit (current: {{ limit }})</button>
+    <button @click="limit++">Increment Limit (current: {{ limit }})</button> -->
 
     <Repeat :config="{ times: 3, content: 'Repeat me.' }" />
   </div>
@@ -34,7 +34,7 @@
 //import RepeatTyped from "./components/RepeatTyped";
 //import Hello from "./components/Hello"; // using dynamic props with data binding
 //import CustomSelect from "./components/CustomSelect";
-import PaginatedList from "./components/PaginatedList.vue";
+//import PaginatedList from "./components/PaginatedList.vue";
 import Repeat from "./components/Repeat.vue";
 
 //imports for passing props that change over time
@@ -52,7 +52,7 @@ export default {
     //Repeat,
     //RepeatTyped,
     //CustomSelect,
-    PaginatedList,
+    //PaginatedList,
     Repeat,
     //Hello,
   },
