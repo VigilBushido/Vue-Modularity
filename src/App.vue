@@ -25,6 +25,10 @@
     <button @click="limit++">Increment Limit (current: {{ limit }})</button> -->
 
     <Repeat :config="{ times: 3, content: 'Repeat me.' }" />
+
+    <Box>
+      <h3>This whole h3 is rendered in the slot</h3>
+    </Box>
   </div>
 </template>
 

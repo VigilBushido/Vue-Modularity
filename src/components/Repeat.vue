@@ -1,5 +1,6 @@
 <template>
   <div>
+    <slot />
     <span v-for="r in repetitions" :key="r">
       {{ config.content }}
     </span>
