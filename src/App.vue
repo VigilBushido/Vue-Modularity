@@ -40,6 +40,7 @@
 //import CustomSelect from "./components/CustomSelect";
 //import PaginatedList from "./components/PaginatedList.vue";
 import Repeat from "./components/Repeat.vue";
+import Box from "./components/Box.vue";
 
 //imports for passing props that change over time
 const possibleGreetings = [
@@ -58,6 +59,7 @@ export default {
     //CustomSelect,
     //PaginatedList,
     Repeat,
+    Box,
     //Hello,
   },
   data() {
