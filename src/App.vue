@@ -27,7 +27,9 @@
     <Repeat :config="{ times: 3, content: 'Repeat me.' }" />
 
     <Box>
-      <h3>This whole h3 is rendered in the slot</h3>
+      <h3>
+        This whole h3 is rendered in the slot with parent count {{ count }}
+      </h3>
     </Box>
   </div>
 </template>
@@ -64,6 +66,7 @@ export default {
   },
   data() {
     return {
+      count: 0,
       offset: 0,
       limit: 0,
       snacks: [
@@ -86,7 +89,7 @@ export default {
       who: "Vue.js",   // we refactor this so it only holds default index*/
       currentIndex: 0,
       //count: 1,
-      count: "no-number-here",
+      //count: "no-number-here",
 
       //Custom validation of Array's, Object shapes, and more with Validators
       selected: "salt-vinegar",
