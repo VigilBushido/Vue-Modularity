@@ -31,11 +31,15 @@
         This whole h3 is rendered in the slot with parent count {{ count }}
       </h3>
     </Box>
-
-    <article>
-      <div>Title: <slot name="title" /></div>
-      <div>Excerpt: <slot name="excerpt" /></div>
-    </article>
+    <Article>
+      <template v-slot:title>
+        <h3>My Article Title</h3>
+      </template>
+      <template v-slot:excerpt>
+        <p>First paragraph of content</p>
+        <p>Second paragraph of content</p>
+      </template>
+    </Article>
   </div>
 </template>
 
@@ -48,6 +52,7 @@
 //import PaginatedList from "./components/PaginatedList.vue";
 import Repeat from "./components/Repeat.vue";
 import Box from "./components/Box.vue";
+import Article from "./components/Article.vue";
 
 //imports for passing props that change over time
 const possibleGreetings = [
@@ -67,6 +72,7 @@ export default {
     //PaginatedList,
     Repeat,
     Box,
+    Article,
     //Hello,
   },
   data() {
