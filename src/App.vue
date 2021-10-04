@@ -31,6 +31,11 @@
         This whole h3 is rendered in the slot with parent count {{ count }}
       </h3>
     </Box>
+
+    <article>
+      <div>Title: <slot name="title" /></div>
+      <div>Excerpt: <slot name="excerpt" /></div>
+    </article>
   </div>
 </template>
 
