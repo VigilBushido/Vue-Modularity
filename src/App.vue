@@ -40,6 +40,12 @@
         <p>Second paragraph of content</p>
       </template>
     </Article>
+
+    <ScopedSlots :items="snacks">
+      <template #default="{ item }">
+        {{ item.content }}
+      </template>
+    </ScopedSlots>
   </div>
 </template>
 
@@ -53,6 +59,7 @@
 import Repeat from "./components/Repeat.vue";
 import Box from "./components/Box.vue";
 import Article from "./components/Article.vue";
+import ScopedSlots from "./components/ScopedSlots";
 
 //imports for passing props that change over time
 const possibleGreetings = [
@@ -73,6 +80,7 @@ export default {
     Repeat,
     Box,
     Article,
+    ScopedSlots,
     //Hello,
   },
   data() {
